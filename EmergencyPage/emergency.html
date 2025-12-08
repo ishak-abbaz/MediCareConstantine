@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Appointment - MediCare Constantine</title>
+    <link rel="icon" type="image/png" href="../HomePage/clinic_icon.ico">
+    <link rel="stylesheet" href="emergency.css">
+    <link rel="stylesheet" href="../HomePage/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navigation_bar">
+        <div class="clinic_name">MediCare Constantine</div>
+        <ul class="navigation_links">
+            <li><a href="../HomePage/index.html">Home</a></li>
+            <li><a href="../ServicesPage/services.html">Services</a></li>
+            <li><a href="../AppointmentPage/appointment.html">Appointment</a></li>
+            <li><a href="../ContactPage/contact.html">Contact Us</a></li>
+            <li><a href="../AboutUsPage/about.html">About</a></li>
+            <li><a href="emergency.html" class="emergency-nav-btn active">🚨</a></li>
+        </ul>
+    </nav>
+
+    <!-- Emergency Appointment Section -->
+    <section class="emergency-appointment-section">
+        <div class="content-wrapper">
+            <h1>🚨 Emergency Appointment Request</h1>
+            <p class="subtitle">We prioritize urgent cases. Fill out this form and we'll contact you immediately.</p>
+
+            <!-- Emergency Contact Info -->
+            <div class="emergency-contact-box">
+                <h3>📞 Emergency Hotline</h3>
+                <p class="hotline-number">+213 (0)31 XX XX XX XX</p>
+                <p>Available 24/7 for urgent medical assistance</p>
+            </div>
+
+            <form id="emergencyAppointmentForm" class="emergency-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number * (for immediate contact)</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <input type="number" id="age" name="age" min="0" max="150" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urgency">Urgency Level *</label>
+                        <select id="urgency" name="urgency" required>
+                            <option value="">-- Select Urgency --</option>
+                            <option value="critical">Critical - Life Threatening</option>
+                            <option value="high">High - Severe Pain/Symptoms</option>
+                            <option value="moderate">Moderate - Urgent but Stable</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="symptoms">Describe Symptoms/Emergency *</label>
+                    <textarea id="symptoms" name="symptoms" rows="4" required placeholder="Please describe your symptoms, injuries, or medical emergency in detail..."></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="medicalHistory">Relevant Medical History</label>
+                    <textarea id="medicalHistory" name="medicalHistory" rows="3" placeholder="Any allergies, current medications, or existing conditions we should know about..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="location">Current Location *</label>
+                        <input type="text" id="location" name="location" required placeholder="Where are you now?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transportation">Can you reach our facility? *</label>
+                        <select id="transportation" name="transportation" required>
+                            <option value="">-- Select Option --</option>
+                            <option value="yes">Yes, I can come immediately</option>
+                            <option value="need-help">Need transportation assistance</option>
+                            <option value="cannot">Cannot travel - need home visit</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="emergency-disclaimer">
+                    <p>⚠️ <strong>Important:</strong> If this is a life-threatening emergency (chest pain, difficulty breathing, severe bleeding, loss of consciousness), please call +213 (0)31 XX XX XX XX or go to the nearest emergency room immediately. This form is for urgent but non-life-threatening medical situations.</p>
+                </div>
+
+                <button type="submit" class="emergency-submit-btn">🚨 Submit Emergency Request</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <footer class="footer">
+    <div class="footer-content">
+        <p>Developped by Ishak ABBAZ</p>
+        <p>Clinic Address: Nouvelle Ville Ali Mendjeli</p>
+        <p>Emergency Hotline: +213 (0)31 XX XX XX XX</p>
+        <p>Email: clinic@medicare.com</p>
+        <div class="social-links">
+        <a href="">Facebook</a> | 
+        <a href="">Instagram</a> | 
+        <a href="">Twitter</a>
+        </div>
+        <p>&copy; 2025 MediCare Constantine. All rights reserved.</p>
+    </div>
+    </footer>
+</body>
+</html>

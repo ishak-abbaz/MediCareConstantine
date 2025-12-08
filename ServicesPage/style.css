@@ -1,0 +1,569 @@
+/* Services Page Styles */
+
+/* Services Hero Section */
+.services-hero {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(103, 179, 232, 0.9)),
+                url('images/services-hero.jpg') center/cover;
+    padding: 120px 5%;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Services Introduction */
+.services-intro {
+    padding: 80px 0;
+    background: white;
+    text-align: center;
+}
+
+.services-intro h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.services-intro p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #5a6c7d;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+.services-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Service Card */
+.service-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(74, 144, 226, 0.2);
+    border-color: #4a90e2;
+}
+
+/* Service Icon */
+.service-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Service Title */
+.service-card h3 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* Service Description */
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #5a6c7d;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Service Features List */
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.service-features li {
+    padding: 8px 0;
+    color: #5a6c7d;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4a90e2;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Service Button */
+.service-btn {
+    display: inline-block;
+    background: linear-gradient(to right, #4a90e2, #67b3e8);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.service-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(74, 144, 226, 0.4);
+}
+
+/* Emergency Card Highlight */
+.emergency-highlight {
+    border: 2px solid #e74c3c;
+    background: linear-gradient(135deg, #fff5f5 0%, white 100%);
+}
+
+.emergency-highlight:hover {
+    border-color: #c0392b;
+    box-shadow: 0 12px 35px rgba(231, 76, 60, 0.2);
+}
+
+.emergency-btn {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+}
+
+.emergency-btn:hover {
+    box-shadow: 0 6px 18px rgba(231, 76, 60, 0.4);
+}
+
+/* Why Choose Us Section */
+.why-choose-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.why-choose-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 30px 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #5a6c7d;
+}
+
+/* Call to Action Section */
+.services-cta {
+    padding: 80px 0;
+    background: linear-gradient(to right, #4a90e2, #67b3e8);
+    text-align: center;
+    color: white;
+}
+
+.services-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.services-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+/* Amazing Appointment Button */
+.services-cta .appointment-button {
+    display: inline-block;
+    background: white;
+    color: #4a90e2;
+    padding: 20px 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.services-cta .appointment-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transition: left 0.5s ease;
+}
+
+.services-cta .appointment-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    background: #f0f8ff;
+}
+
+.services-cta .appointment-button:hover::before {
+    left: 100%;
+}
+
+.services-cta .appointment-button:active {
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* Active Navigation Link */
+.navigation_links a.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero {
+        padding: 80px 5%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .services-intro,
+    .services-section,
+    .why-choose-section,
+    .services-cta {
+        padding: 60px 0;
+    }
+    
+    .services-intro h2,
+    .section-title,
+    .why-choose-section h2,
+    .services-cta h2 {
+        font-size: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .service-card {
+        padding: 35px 25px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .service-icon {
+        font-size: 3rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.4rem;
+    }
+    
+    .services-cta .appointment-button {
+        padding: 16px 35px;
+        font-size: 1rem;
+    }
+}
+.services-detailed-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #5a6c7d;
+    margin-bottom: 50px;
+    margin-top: -20px;
+}
+
+/* Services Accordion Container */
+.services-accordion {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual Accordion Item */
+.accordion-item {
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
+}
+
+/* Accordion Header (Clickable Part) */
+.accordion-header {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 20px;
+    background: white;
+}
+
+.accordion-header:hover {
+    background: #f0f8ff;
+}
+
+.accordion-item.active .accordion-header {
+    background: linear-gradient(to right, #4a90e2, #67b3e8);
+    color: white;
+}
+
+/* Accordion Icon */
+.accordion-icon {
+    font-size: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Accordion Title */
+.accordion-header h3 {
+    flex: 1;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.accordion-item.active .accordion-header h3 {
+    color: white;
+}
+
+/* Accordion Toggle (+/-) */
+.accordion-toggle {
+    font-size: 2rem;
+    font-weight: 300;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.accordion-item.active .accordion-toggle {
+    transform: rotate(45deg);
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+/* Accordion Content (Hidden by Default) */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background: white;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 1500px;
+}
+
+/* Accordion Details Container */
+.accordion-details {
+    padding: 30px;
+}
+
+.accordion-details h4 {
+    color: #4a90e2;
+    font-size: 1.2rem;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.accordion-details h4:first-child {
+    margin-top: 0;
+}
+
+.accordion-details p {
+    color: #5a6c7d;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.accordion-details ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.accordion-details ul li {
+    padding: 8px 0;
+    padding-left: 30px;
+    position: relative;
+    color: #5a6c7d;
+    line-height: 1.6;
+}
+
+.accordion-details ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4a90e2;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Emergency Highlight in Accordion */
+.accordion-item.emergency-highlight {
+    border-left: 5px solid #e74c3c;
+}
+
+.accordion-item.emergency-highlight.active .accordion-header {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+}
+/* Responsive Design for Accordion */
+@media (max-width: 768px) {
+    .services-detailed-section {
+        padding: 60px 0;
+    }
+    
+    .accordion-header {
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .accordion-icon {
+        font-size: 2rem;
+    }
+    
+    .accordion-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .accordion-details {
+        padding: 20px;
+    }
+    
+    .accordion-details h4 {
+        font-size: 1.1rem;
+    }
+}

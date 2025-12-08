@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Active Navigation Link */
+.navigation_links a.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Navigation Bar - Professional Medical Blue */
+.navigation_bar {
+    background: linear-gradient(to right, #4a90e2, #67b3e8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    box-shadow: 0 2px 10px rgba(74, 144, 226, 0.2);
+}
+
+.navigation_links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.navigation_links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+}
+
+.navigation_links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+
+/* About Page Specific Styles */
+/* Import or link your main style.css for navigation bar styles */
+
+/* About Hero Section */
+.about-hero {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(103, 179, 232, 0.9)),
+                url('images/clinic-hero.jpg') center/cover;
+    padding: 120px 5%;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+/* Content Wrapper - Used throughout page */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Clinic Description Section */
+.clinic-description {
+    padding: 80px 0;
+    background: white;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.clinic-description h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.clinic-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #5a6c7d;
+    margin-bottom: 20px;
+}
+
+/* History Section */
+.history-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.history-text h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.history-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #5a6c7d;
+    margin-bottom: 20px;
+}
+
+/* Milestone Box */
+.milestone {
+    margin-top: 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.milestone:hover {
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
+}
+
+.milestone h3 {
+    font-size: 1.5rem;
+    color: #4a90e2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.milestone ul {
+    list-style: none;
+    padding: 0;
+}
+
+.milestone li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+    color: #5a6c7d;
+    transition: color 0.3s ease;
+}
+
+.milestone li:last-child {
+    border-bottom: none;
+}
+
+.milestone li:hover {
+    color: #4a90e2;
+}
+
+.milestone li strong {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+/* History Image */
+.history-image {
+    position: relative;
+}
+
+.history-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.history-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Values Section */
+.values-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.values-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Individual Value Card */
+.value-card {
+    background: #f8f9fa;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
+    border-color: #4a90e2;
+    background: white;
+}
+
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    transform: scale(1.1);
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.value-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #5a6c7d;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.philosophy-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.philosophy-text h3 {
+    font-size: 1.5rem;
+    color: #4a90e2;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+.philosophy-text h3:first-child {
+    margin-top: 0;
+}
+
+.philosophy-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #5a6c7d;
+}
+
+/* Philosophy Quote Box */
+.philosophy-quote {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 5px solid #4a90e2;
+    position: sticky;
+    top: 100px;
+}
+
+.philosophy-quote blockquote {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #2c3e50;
+    font-style: italic;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.philosophy-quote blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    color: #4a90e2;
+    opacity: 0.3;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+}
+
+.philosophy-quote cite {
+    font-size: 1rem;
+    color: #4a90e2;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Call to Action Section */
+
+.about-cta {
+    padding: 80px 0;
+    background: linear-gradient(to right, #4a90e2, #67b3e8);
+    text-align: center;
+    color: white;
+}
+
+.about-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+/* Amazing Schedule Button */
+.about-cta .appointment-button {
+    display: inline-block;
+    background: white;
+    color: #4a90e2;
+    padding: 20px 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-cta .appointment-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transition: left 0.5s ease;
+}
+
+.about-cta .appointment-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    background: #f0f8ff;
+}
+
+.about-cta .appointment-button:hover::before {
+    left: 100%;
+}
+
+.about-cta .appointment-button:active {
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* Active Navigation Link Indicator */
+.navigation_links a.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .history-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .philosophy-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .philosophy-quote {
+        position: relative;
+        top: 0;
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation_bar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 3%;
+    }
+    
+    .navigation_links {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-hero {
+        padding: 80px 5%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .clinic-description,
+    .history-section,
+    .values-section,
+    .philosophy-section,
+    .about-cta {
+        padding: 60px 0;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .clinic-description h2,
+    .history-text h2,
+    .values-section h2,
+    .philosophy-section h2,
+    .about-cta h2 {
+        font-size: 2rem;
+    }
+    
+    .value-card {
+        padding: 30px 25px;
+    }
+    
+    .milestone {
+        padding: 25px;
+    }
+    
+    .philosophy-quote {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation_links a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .clinic-description h2,
+    .history-text h2,
+    .values-section h2,
+    .philosophy-section h2,
+    .about-cta h2 {
+        font-size: 1.8rem;
+    }
+    
+    .clinic-description p,
+    .history-text p,
+    .philosophy-text p {
+        font-size: 1rem;
+    }
+    
+    .value-icon {
+        font-size: 2.5rem;
+    }
+    
+    .value-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .philosophy-quote blockquote {
+        font-size: 1.1rem;
+    }
+}

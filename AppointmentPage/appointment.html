@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="icon" type="image/png" href="../HomePage/clinic_icon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../HomePage/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="navigation_bar">
+        <div class="clinic_name">MediCare Constantine</div>
+        <ul class="navigation_links">
+            <li><a href="../HomePage/index.html">Home</a></li>
+            <li><a href="../ServicesPage/services.html">Services</a></li>
+            <li><a href="./appointment.html" class="active">Appointment</a></li>
+            <li><a href="../ContactPage/contact.html">Contact Us</a></li>
+            <li><a href="../AboutUsPage/about.html">About</a></li>
+            <li><a href="../EmergencyPage/emergency.html" class="emergency-nav-btn">🚨</a></li>
+        </ul>
+    </nav>
+    <section class="appointment-section">
+        <div class="form-wrapper">
+            <h1>Book an Appointment</h1>
+
+            <form id="appointmentForm" action="#" method="POST" enctype="multipart/form-data">
+
+                <!-- Personal Info -->
+                <div class="form-row">
+                    <label>First Name *</label>
+                    <input type="text" id="firstName" name="first_name" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Last Name *</label>
+                    <input type="text" id="lastName" name="last_name" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Full Name (for display) *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Birthdate *</label>
+                    <input type="date" name="birthdate" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Gender *</label>
+                    <select name="gender" required>
+                        <option value="" disabled selected>Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <!-- Service Selection -->
+                <div class="form-row">
+                    <label>Requested Service *</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Select a service --</option>
+                        <option value="general-medicine">General Medicine</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="dermatology">Dermatology</option>
+                        <option value="gynecology-obstetrics">Gynecology & Obstetrics</option>
+                        <option value="special-consultation">Special Consultation</option>
+                        <option value="emergency-care">Emergency Care</option>
+                        <option value="medical-imaging">Medical Imaging</option>
+                        <option value="laboratory-tests">Laboratory Tests</option>
+                    </select>
+                </div>
+
+                <!-- Doctor Selection (will be populated dynamically) -->
+                <div class="form-row">
+                    <label>Select a Doctor *</label>
+                    <select id="doctor" name="doctor" required disabled>
+                        <option value="">-- First Select a Service --</option>
+                    </select>
+                </div>
+
+                <!-- Preferred Date & Time -->
+                <div class="form-row">
+                    <label>Preferred Date *</label>
+                    <input type="date" id="date" name="preferred_date" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="time">Preferred Time *</label>
+                    <select id="time" name="time" required>
+                        <option value="">-- Choose a Time --</option>
+                        <option value="08:00">08:00 AM</option>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="15:00">03:00 PM</option>
+                        <option value="16:00">04:00 PM</option>
+                        <option value="17:00">05:00 PM</option>
+                    </select>
+                </div>
+
+                <!-- Preferred Time Slot - Hidden by Default (for Special Consultation) -->
+                <div class="form-row" id="timeSlotGroup" style="display: none;">
+                    <label for="timeSlot">Preferred Time Slot *</label>
+                    <select id="timeSlot" name="timeSlot">
+                        <option value="">-- Choose Time Slot --</option>
+                        <option value="morning">Morning (08:00 - 12:00)</option>
+                        <option value="afternoon">Afternoon (14:00 - 18:00)</option>
+                        <option value="evening">Evening (18:00 - 20:00)</option>
+                    </select>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="form-row">
+                    <label>Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Address *</label>
+                    <textarea name="address" rows="3" required></textarea>
+                </div>
+
+                <!-- Medical Info -->
+                <div class="form-row">
+                    <label>Allergies / Medical History (Optional)</label>
+                    <textarea id="message" name="medical_history" rows="4" placeholder="Please describe any allergies, current medications, or medical conditions..."></textarea>
+                </div>
+
+                <!-- File Upload -->
+                <div class="form-row">
+                    <label>Upload Medical File (Optional)</label>
+                    <input type="file" name="medical_file" accept=".pdf,.jpg,.png">
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="submit-btn">Submit Appointment</button>
+
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="footer-content">
+        <p>Developped by Ishak ABBAZ</p>
+        <p>Clinic Address: Nouvelle Ville Ali Mendjeli</p>
+        <p>Emergency Hotline: +213 (0)31 XX XX XX XX</p>
+        <p>Email: clinic@medicare.com</p>
+        <div class="social-links">
+        <a href="">Facebook</a> | 
+        <a href="">Instagram</a> | 
+        <a href="">Twitter</a>
+        </div>
+        <p>&copy; 2025 MediCare Constantine. All rights reserved.</p>
+    </div>
+    </footer>
+</body>
+
+</html>

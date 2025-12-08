@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Constantine</title>
+    <link rel="icon" type="image/png" href="clinic_icon.ico">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <nav class="navigation_bar">
+        <div class="clinic_name">MediCare Constantine</div>
+        <ul class="navigation_links">
+            <li><a href="../HomePage/index.html" class="active">Home</a></li>
+            <li><a href="../ServicesPage/services.html">Services</a></li>
+            <li><a href="../AppointmentPage/appointment.html">Appointment</a></li>
+            <li><a href="../ContactPage/contact.html">Contact Us</a></li>
+            <li><a href="../AboutUsPage/about.html">About</a></li>
+            <li><a href="../EmergencyPage/emergency.html" class="emergency-nav-btn">🚨</a></li>
+        </ul>
+    </nav>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide active">
+                <img src="pic3.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="pic2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="pic1.jpg" alt="Slide 3">
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+        <!-- Dots/indicators -->
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <h1 class="welcome-title">Welcome to MediCare Constantine</h1>
+        <p class="intro-text">
+            Our mission is to provide compassionate, patient-centered care that puts your health first.
+            With 14 of experience, our dedicated team offers comprehensive medical services in a welcoming environment.
+            We treat every patient like family—because your wellness is our priority.
+        </p>
+        <button class="appointment-button" onclick="bookAppointment()">Book New Appointment</button>
+    </section>
+
+    <section class="feedback-section">
+        <h2 class="section-title">Patient Testimonials</h2>
+        
+        <div class="feedback-container">
+            <div class="feedback-card">
+                <div class="patient-info">
+                    <div class="patient-avatar">IA</div>
+                    <h3 class="patient-name">Ishak ABBAZ</h3>
+                </div>
+                <p class="feedback-text">
+                    "The care I received was exceptional. The staff was professional, 
+                    caring, and made me feel comfortable throughout my treatment. 
+                    Highly recommended!"
+                </p>
+                <div class="rating">★★★★★</div>
+            </div>
+
+            <div class="feedback-card">
+                <div class="patient-info">
+                    <div class="patient-avatar">YA</div>
+                    <h3 class="patient-name">Yasser AIMAR</h3>
+                </div>
+                <p class="feedback-text">
+                    "Outstanding service from start to finish. The doctors took time 
+                    to explain everything and answered all my questions. Very satisfied!"
+                </p>
+                <div class="rating">★★★★★</div>
+            </div>
+
+            <div class="feedback-card">
+                <div class="patient-info">
+                    <div class="patient-avatar">MA</div>
+                    <h3 class="patient-name">Mouaad Amireche</h3>
+                </div>
+                <p class="feedback-text">
+                    "Great experience overall. The facility is modern and clean, 
+                    and the medical team is knowledgeable and friendly."
+                </p>
+                <div class="rating">★★★★☆</div>
+            </div>
+
+            <div class="feedback-card">
+                <div class="patient-info">
+                    <div class="patient-avatar">AB</div>
+                    <h3 class="patient-name">Amina BOUFRAH</h3>
+                </div>
+                <p class="feedback-text">
+                    "I'm grateful for the compassionate care I received. The team 
+                    went above and beyond to ensure my recovery was smooth."
+                </p>
+                <div class="rating">★★★★★</div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="footer-content">
+        <p>Developped by Ishak ABBAZ</p>
+        <p>Clinic Address: Nouvelle Ville Ali Mendjeli</p>
+        <p>Emergency Hotline: +213 (0)31 XX XX XX XX</p>
+        <p>Email: clinic@medicare.com</p>
+        <div class="social-links">
+        <a href="">Facebook</a> | 
+        <a href="">Instagram</a> | 
+        <a href="">Twitter</a>
+        </div>
+        <p>&copy; 2025 MediCare Constantine. All rights reserved.</p>
+    </div>
+    </footer>
+</body>
+
+</html>
