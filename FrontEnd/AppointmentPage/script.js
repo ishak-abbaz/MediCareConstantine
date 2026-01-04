@@ -213,63 +213,63 @@ $(document).ready(function () {
     }
 
     // Form Submission
-    $form.on('submit', function (e) {
-        e.preventDefault(); // Remove this line later when connecting to real backend
-
-        let allValid = true;
-        let firstErrorField = null;
-
-        $('input[required], select[required], textarea[required]').each(function () {
-            if (!validateField($(this))) {
-                allValid = false;
-                if (!firstErrorField) firstErrorField = $(this);
-            }
-        });
-
-        if (!allValid) {
-            alert('Please fix the errors in the form before submitting.');
-            if (firstErrorField) {
-                $('html, body').animate({
-                    scrollTop: firstErrorField.offset().top - 100
-                }, 500);
-                firstErrorField.focus();
-            }
-            return;
-        }
-
-        // Get form data for submission
-        const formData = {
-            name: $('#fullName').val(),
-            email: $('#email').val(),
-            phone: $('#phone').val(),
-            date: $('#date').val(),
-            service: $('#service option:selected').text(),
-            doctor: $('#doctor option:selected').text(),
-            time: $('#time').val(),
-            timeSlot: $('#timeSlot').val() ? $('#timeSlot option:selected').text() : 'N/A',
-            message: $('#message').val()
-        };
-
-        // Simulate successful submission
-        $submitBtn.text('Submitting...').prop('disabled', true);
-
-        setTimeout(function () {
-            alert('Appointment booked successfully!\n\nService: ' + formData.service + '\nDoctor: ' + formData.doctor + '\n\nWe will contact you soon to confirm.');
-            console.log('Appointment Data:', formData);
-            
-            $form[0].reset();
-            $('input, select, textarea').removeClass('success error');
-            $('.error-msg').remove();
-            $submitBtn.text('Submit Appointment').prop('disabled', false);
-            
-            // Reset doctor dropdown to disabled state
-            updateDoctorList('');
-            
-            // Hide time slot if visible
-            $('#timeSlotGroup').hide();
-            $('#timeSlot').prop('required', false);
-        }, 1500);
-    });
+    // $form.on('submit', function (e) {
+    //     e.preventDefault(); // Remove this line later when connecting to real backend
+    //
+    //     let allValid = true;
+    //     let firstErrorField = null;
+    //
+    //     $('input[required], select[required], textarea[required]').each(function () {
+    //         if (!validateField($(this))) {
+    //             allValid = false;
+    //             if (!firstErrorField) firstErrorField = $(this);
+    //         }
+    //     });
+    //
+    //     if (!allValid) {
+    //         alert('Please fix the errors in the form before submitting.');
+    //         if (firstErrorField) {
+    //             $('html, body').animate({
+    //                 scrollTop: firstErrorField.offset().top - 100
+    //             }, 500);
+    //             firstErrorField.focus();
+    //         }
+    //         return;
+    //     }
+    //
+    //     // Get form data for submission
+    //     const formData = {
+    //         name: $('#fullName').val(),
+    //         email: $('#email').val(),
+    //         phone: $('#phone').val(),
+    //         date: $('#date').val(),
+    //         service: $('#service option:selected').text(),
+    //         doctor: $('#doctor option:selected').text(),
+    //         time: $('#time').val(),
+    //         timeSlot: $('#timeSlot').val() ? $('#timeSlot option:selected').text() : 'N/A',
+    //         message: $('#message').val()
+    //     };
+    //
+    //     // Simulate successful submission
+    //     $submitBtn.text('Submitting...').prop('disabled', true);
+    //
+    //     setTimeout(function () {
+    //         alert('Appointment booked successfully!\n\nService: ' + formData.service + '\nDoctor: ' + formData.doctor + '\n\nWe will contact you soon to confirm.');
+    //         console.log('Appointment Data:', formData);
+    //
+    //         $form[0].reset();
+    //         $('input, select, textarea').removeClass('success error');
+    //         $('.error-msg').remove();
+    //         $submitBtn.text('Submit Appointment').prop('disabled', false);
+    //
+    //         // Reset doctor dropdown to disabled state
+    //         updateDoctorList('');
+    //
+    //         // Hide time slot if visible
+    //         $('#timeSlotGroup').hide();
+    //         $('#timeSlot').prop('required', false);
+    //     }, 1500);
+    // });
 
     // Optional: Add placeholder-like labels that move on focus
     $('.form-row label').each(function () {
