@@ -1,4 +1,5 @@
 <?php
+
     function getDatabaseConnection(): PDO
     {
         try {

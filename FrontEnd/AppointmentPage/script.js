@@ -212,6 +212,7 @@ $(document).ready(function () {
         $field.next('.error-msg').remove();
     }
 
+    // Optional: Add placeholder-like labels that move on focus
     $('.form-row label').each(function () {
         const $label = $(this);
         const $input = $label.next('input, select, textarea');
