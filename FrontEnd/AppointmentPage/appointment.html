@@ -20,6 +20,7 @@
             <li><a href="../ContactPage/contact.html">Contact Us</a></li>
             <li><a href="../AboutUsPage/about.html">About</a></li>
             <li><a href="../EmergencyPage/emergency.html" class="emergency-nav-btn">🚨</a></li>
+            <li><a href="../../BackEnd/login.php" class="login-btn">Login</a></li>
         </ul>
     </nav>
     <section class="appointment-section">
@@ -72,7 +73,7 @@
                 </div>
                 <!-- Doctor Selection (will be populated dynamically) -->
                 <div class="form-row"> <label>Select a Doctor *</label>
-                    <select id="doctor" name="doctor" required disabled>
+                    <select id="doctor" name="selected_doctor" required disabled>
                         <option value="">-- First Select a Service --</option>
                     </select>
                 </div> <!-- Preferred Date & Time -->
@@ -84,15 +85,15 @@
                     <label for="time">Preferred Time *</label>
                     <select id="time" name="preferred_time" required>
                         <option value="">-- Choose a Time --</option>
-                        <option value="08:00">08:00 AM</option>
-                        <option value="09:00">09:00 AM</option>
-                        <option value="10:00">10:00 AM</option>
-                        <option value="11:00">11:00 AM</option>
-                        <option value="12:00">12:00 PM</option>
-                        <option value="14:00">02:00 PM</option>
-                        <option value="15:00">03:00 PM</option>
-                        <option value="16:00">04:00 PM</option>
-                        <option value="17:00">05:00 PM</option>
+                        <option value="08:00">08:00</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
                     </select>
                 </div>
                 <!-- Preferred Time Slot - Hidden by Default (for Special Consultation) -->
@@ -120,7 +121,7 @@
                 </div> <!-- Medical Info -->
                 <div class="form-row">
                     <label>Allergies / Medical History (Optional)</label>
-                    <textarea id="message" name="medical_history" rows="4" placeholder="Please describe any allergies, current medications, or medical conditions..."></textarea>
+                    <textarea id="message" name="allergies_history" rows="4" placeholder="Please describe any allergies, current medications, or medical conditions..."></textarea>
                 </div>
                 <!-- File Upload -->
                 <div class="form-row">

@@ -11,11 +11,12 @@
 /* Navigation Bar - Professional Medical Blue */
 .navigation_bar {
     background: linear-gradient(to right, #4a90e2, #67b3e8);
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 5%;
     box-shadow: 0 2px 10px rgba(74, 144, 226, 0.2);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .navigation_links {
@@ -24,6 +25,7 @@
     list-style: none;
     gap: 2.5rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .navigation_links a {
@@ -143,56 +145,10 @@
     margin-bottom: 20px;
 }
 
-/* Milestone Box */
-.milestone {
-    margin-top: 40px;
-    padding: 30px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-}
-
-.milestone:hover {
-    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
-}
-
-.milestone h3 {
-    font-size: 1.5rem;
-    color: #4a90e2;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.milestone ul {
-    list-style: none;
-    padding: 0;
-}
-
-.milestone li {
-    padding: 12px 0;
-    border-bottom: 1px solid #e0e0e0;
-    font-size: 1rem;
-    color: #5a6c7d;
-    transition: color 0.3s ease;
-}
-
-.milestone li:last-child {
-    border-bottom: none;
-}
-
-.milestone li:hover {
-    color: #4a90e2;
-}
-
-.milestone li strong {
-    color: #2c3e50;
-    font-weight: 700;
-}
-
 /* History Image */
 .history-image {
     position: relative;
+    overflow: hidden;
 }
 
 .history-image img {
@@ -200,6 +156,9 @@
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .history-image img:hover {
@@ -208,7 +167,7 @@
 
 /* Values Section */
 .values-section {
-    padding: 80px 0;
+    padding: 80px 5%;
     background: white;
 }
 
@@ -267,86 +226,7 @@
     color: #5a6c7d;
 }
 
-/* Philosophy Section */
-.philosophy-section {
-    padding: 80px 0;
-    background: #f8f9fa;
-}
-
-.philosophy-section h2 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 50px;
-    font-weight: 700;
-}
-
-.philosophy-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 60px;
-    align-items: start;
-}
-
-.philosophy-text h3 {
-    font-size: 1.5rem;
-    color: #4a90e2;
-    margin-bottom: 15px;
-    margin-top: 30px;
-    font-weight: 700;
-}
-
-.philosophy-text h3:first-child {
-    margin-top: 0;
-}
-
-.philosophy-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #5a6c7d;
-}
-
-/* Philosophy Quote Box */
-.philosophy-quote {
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-left: 5px solid #4a90e2;
-    position: sticky;
-    top: 100px;
-}
-
-.philosophy-quote blockquote {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #2c3e50;
-    font-style: italic;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.philosophy-quote blockquote::before {
-    content: '"';
-    font-size: 4rem;
-    color: #4a90e2;
-    opacity: 0.3;
-    position: absolute;
-    top: -20px;
-    left: -10px;
-}
-
-.philosophy-quote cite {
-    font-size: 1rem;
-    color: #4a90e2;
-    font-style: normal;
-    font-weight: 600;
-}
-
 /* Call to Action Section */
-
 .about-cta {
     padding: 80px 0;
     background: linear-gradient(to right, #4a90e2, #67b3e8);
@@ -419,24 +299,20 @@
     .hero-content h1 {
         font-size: 3rem;
     }
-    
+
     .history-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 40px;
+        display: grid;
     }
-    
-    .philosophy-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .philosophy-quote {
-        position: relative;
-        top: 0;
-    }
-    
+
     .values-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    
+    .values-section {
+        padding: 60px 5%;
     }
 }
 
@@ -468,7 +344,6 @@
     .clinic-description,
     .history-section,
     .values-section,
-    .philosophy-section,
     .about-cta {
         padding: 60px 0;
     }
@@ -478,10 +353,13 @@
         gap: 20px;
     }
     
+    .values-section {
+        padding: 50px 5%;
+    }
+    
     .clinic-description h2,
     .history-text h2,
     .values-section h2,
-    .philosophy-section h2,
     .about-cta h2 {
         font-size: 2rem;
     }
@@ -490,13 +368,17 @@
         padding: 30px 25px;
     }
     
-    .milestone {
-        padding: 25px;
+    .about-cta .appointment-button {
+        padding: 16px 40px;
+        font-size: 1.1rem;
+        width: 90%;
+        max-width: 400px;
     }
     
-    .philosophy-quote {
-        padding: 30px;
+    .history-grid {
+        gap: 30px;
     }
+    
 }
 
 @media (max-width: 480px) {
@@ -535,7 +417,28 @@
         font-size: 1.3rem;
     }
     
-    .philosophy-quote blockquote {
-        font-size: 1.1rem;
+    .values-section {
+        padding: 40px 5%;
+    }
+    
+    .about-cta .appointment-button {
+        padding: 14px 30px;
+        font-size: 1rem;
+        width: 95%;
+        max-width: 350px;
+    }
+    
+    .about-cta h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .about-cta p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .content-wrapper {
+        padding: 0 3%;
     }
 }

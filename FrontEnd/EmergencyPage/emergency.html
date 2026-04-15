@@ -20,6 +20,7 @@
             <li><a href="../ContactPage/contact.html">Contact Us</a></li>
             <li><a href="../AboutUsPage/about.html">About</a></li>
             <li><a href="emergency.html" class="emergency-nav-btn active">🚨</a></li>
+            <li><a href="../../BackEnd/login.php" class="login-btn">Login</a></li>
         </ul>
     </nav>
 
@@ -36,15 +37,15 @@
                 <p>Available 24/7 for urgent medical assistance</p>
             </div>
 
-            <form id="emergencyAppointmentForm" class="emergency-form">
+            <form id="emergencyAppointmentForm" class="emergency-form" action="http://localhost/MedicareConstantine/BackEnd/proccess_appointment.php" method="POST" enctype="multipart/form-data">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="fullName">Full Name *</label>
+                        <label for="fullName">Last Name *</label>
                         <input type="text" id="fullName" name="fullName" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone Number * (for immediate contact)</label>
+                        <label for="phone">Phone Number *</label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
                 </div>
@@ -102,7 +103,6 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
     <footer class="footer">
     <div class="footer-content">
         <p>Developped by Ishak ABBAZ</p>
@@ -117,5 +117,6 @@
         <p>&copy; 2025 MediCare Constantine. All rights reserved.</p>
     </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
